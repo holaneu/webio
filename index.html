@@ -17,74 +17,8 @@
     <meta property="og:url" content="xxxxx">
     <meta property="og:description" content="xxxxx">
 
-    <link rel="icon" type="image/png" href="webio.png">
-
-    <style>
-        * {box-sizing: border-box;}
-        body *, html * {margin: 0; padding: 0; box-sizing: border-box; text-align: center;}
-        header {padding: 20px 20px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); color:silver; position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 1100;}
-        header section.page-title {margin-bottom: 10px;}
-        header section.page-title a {font-size: 24px; font-weight: 600; text-decoration: none; color: white;}
-        header nav a {
-          text-decoration: none; color: #ffffff; display: inline-block; padding: 10px 14px; font-family: 'Monotype-GillSansNovaBook', sans-serif; cursor: pointer;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: 15px;
-          line-height: 20px;
-        }
-        main {background: #ffffff;}
-        main section.page-cover {text-align: center;}
-        main section.page-cover h1 {
-          font-size: 60px;
-          font-style: normal;
-          font-weight: 500;
-          letter-spacing: -0.5px;
-          line-height: 1.26;
-        }
-        main section .container {width: 1000px; 
-          margin-right: auto;
-          margin-left: auto;
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-        main section .section-heading {padding: 15px; text-align: center;}
-        .flex-box {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .fullscreen-background {
-          height: 80vh;
-          display: flex;
-        }
-        .main-background {
-          box-sizing: content-box;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: cover;
-          position: relative;
-        }
-        .mask {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.18);
-        }
-        footer {padding: 10px 20px; background: white;}
-
-        @media (min-width: 768px) {
-          .section-heading {
-            padding: 85px 20px 60px;
-          }
-        }
-    </style>    
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="icon" type="image/png" href="webio.png">        
     
   </head>
   <body>
@@ -100,17 +34,14 @@
 
     <main>
       <section class="page-cover">
-        <div class="main-background fullscreen-background" style="background-image: url('crete-2949058_1920.jpg')">
+        <div class="cover-background">
           <div class="mask"></div>
           <div class="small-container">
-              <div class="main-inner">
-                  <a href="https://www.amazingplaces.cz/cs/kouzelna-mista">
-                    <h1>Webio</h1>
-                    <h2>simple webs</h2>
-                  </a>
-              </div>
-              <a class="btn-black" href="/cs/kouzelna-mista">Prohlédnout</a>
-              <img src="/img/white-arrow-down.svg" class="scroll-icon">
+            <a href="#">
+              <h1>Webio</h1>
+              <h2>simple web template</h2>
+            </a>
+            <a class="btn-black" href="#">More info</a>
           </div>
        </div>        
       </section>
@@ -125,10 +56,6 @@
 
           </div>
         </div>
-        
-      </section>
-
-      <section class="block">
         
       </section>
       

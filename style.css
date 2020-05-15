@@ -1,0 +1,143 @@
+* { 
+    box-sizing: border-box;
+}
+body *, html * {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    text-align: center; 
+    font-family: sans-serif;
+}
+a { 
+    text-decoration: none; 
+}
+a:hover, a:focus { 
+    text-decoration: underline; 
+}
+header {
+    padding: 20px 20px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
+    color:silver; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;}
+header section.page-title {
+    margin-bottom: 10px;
+}
+header section.page-title a {
+    font-size: 24px; 
+    font-weight: 600; 
+    text-decoration: none; 
+    color: white;
+}
+header nav a {
+    text-decoration: none; 
+    color: #ffffff; 
+    display: inline-block; 
+    padding: 10px 14px; 
+    font-family: 'Monotype-GillSansNovaBook', sans-serif; 
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 20px;
+}
+main {
+    background: #ffffff;
+}
+main section.page-cover {
+    text-align: center;
+}
+main section.page-cover h1 {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.26;
+    color: #ffffff;
+}
+main section.page-cover h2 {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 60px;
+    color: #ffffff;
+}
+main section .container {
+    max-width: 1000px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+main section .section-heading {
+    padding: 15px; 
+    text-align: center;
+}
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cover-background {
+    height: 80vh;
+    display: flex;
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-image: url('crete-2949058_1920.jpg');
+}
+.mask {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.18);
+}
+.small-container {
+    padding: 0;
+    height: 100%;
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-black {
+    margin: 40px auto 0;
+    padding: 13px 6px;
+    width: 210px;
+    z-index: 1;
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 46px;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    transition: all 0.2s ease-in;
+}
+.btn-black:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+footer {
+    padding: 10px 20px; 
+    background: white;
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+    padding: 85px 20px 60px;
+    }
+}
