@@ -64,8 +64,8 @@ main section.page-cover h2 {
     line-height: 60px;
     color: #ffffff;
 }
-main section .container {
-    max-width: 1000px; 
+.container {
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -136,8 +136,11 @@ footer {
     background: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .section-heading {
-    padding: 85px 20px 60px;
+        padding: 85px 20px 60px;
     }
+    .container {
+        max-width: 1000px; 
+    }    
 }
