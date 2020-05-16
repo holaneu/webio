@@ -14,6 +14,13 @@ a {
 a:hover, a:focus { 
     text-decoration: underline; 
 }
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 header {
     padding: 20px 20px; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
@@ -64,13 +71,7 @@ main section.page-cover h2 {
     line-height: 60px;
     color: #ffffff;
 }
-main section .container {
-    max-width: 1000px; 
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 main section .section-heading {
     padding: 15px; 
     text-align: center;
@@ -136,8 +137,26 @@ footer {
     background: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .section-heading {
-    padding: 85px 20px 60px;
+        padding: 85px 20px 60px;
+    }
+    .container {
+        max-width: 1000px; 
+    }    
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
     }
 }
