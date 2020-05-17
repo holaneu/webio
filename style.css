@@ -25,7 +25,7 @@ header {
     padding: 20px 20px; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
     color:silver; 
-    position: absolute; //fixed
+    position: absolute; /*fixed*/
     top: 0;
     left: 0;
     right: 0;
@@ -106,7 +106,7 @@ h2 {
 }
 .flex-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /*space-between*/
     align-items: center;
 }
 .cover-background {
@@ -187,6 +187,19 @@ h2 {
     width: 30%;
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
     border-radius: 8px;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.col-block-20p {
+    width: 20%;
+    /*box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;*/
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.col-block-20p .image {
+    /*box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);*/
+    border-radius: 8px;
 }
 .col-block .image {
     width: 100%;
@@ -196,11 +209,17 @@ h2 {
     background-position: center center;
     position: relative;
 }
+.col-block .image img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
 .col-block .text {
     color: #000000;
     padding: 10px;
     text-decoration: none;
     margin-bottom: 20px;
+    height: 170px;
 }
 
 
