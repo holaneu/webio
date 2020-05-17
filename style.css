@@ -18,8 +18,8 @@ a:hover, a:focus {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
 }
 header {
     padding: 20px 20px; 
@@ -29,15 +29,20 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1100;}
-header section.page-title {
-    margin-bottom: 10px;
+    z-index: 1100;
 }
-header section.page-title a {
-    font-size: 24px; 
+.logo {
+    position: relative;
+    display: block;
+    flex: 2;
+    text-align: left;
+    font-size: 26px; 
     font-weight: 600; 
     text-decoration: none; 
     color: white;
+}
+.logo:hover {
+    text-decoration: none;
 }
 header nav a {
     text-decoration: none; 
@@ -126,6 +131,8 @@ main section .section-heading {
     background: #000000;
     color: #ffffff;
     transition: all 0.2s ease-in;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;
 }
 .btn-black:hover {
     background: #ffffff;
