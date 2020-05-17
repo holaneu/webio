@@ -25,7 +25,7 @@ header {
     padding: 20px 20px; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
     color:silver; 
-    position: fixed;
+    position: absolute; /*fixed*/
     top: 0;
     left: 0;
     right: 0;
@@ -106,7 +106,7 @@ h2 {
 }
 .flex-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /*space-between*/
     align-items: center;
 }
 .cover-background {
@@ -117,7 +117,11 @@ h2 {
     background-position: center center;
     background-size: cover;
     position: relative;
-    background-image: url('cover_beach_1920.jpg');
+    background-image: url('cover_forest_1920_blured.jpg'); 
+        /*cover_beach_blured_1920*/
+        /**/
+        /*cover_beach2_blured_1920*/
+    
 }
 .mask {
     content: '';
@@ -154,24 +158,70 @@ h2 {
     background: #000000;
     color: #ffffff;
     transition: all 0.2s ease-in;
-    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
     border-radius: 8px;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
 }
 .btn-black:hover {
     background: #ffffff;
     color: #000000;
 }
-.block-grey {
+.row-block {
     padding: 30px 0 35px;
+}
+.bg-grey {
     background: #f6f6f6;
 }
-.block-grey h2 {
+.big-text {
     font-size: 26px;
     line-height: 35px;
     font-weight: normal;
     text-transform: none;
     margin-bottom: 20px;
 }
+.col-block {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+.col-block-30p {
+    width: 30%;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.col-block-20p {
+    width: 20%;
+    /*box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;*/
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.col-block-20p .image {
+    /*box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);*/
+    border-radius: 8px;
+}
+.col-block .image {
+    width: 100%;
+    color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+.col-block .image img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.col-block .text {
+    color: #000000;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    height: 170px;
+}
+
 
 footer {
     padding: 10px 20px; 
@@ -190,9 +240,8 @@ footer {
     .container {
         max-width: 720px;
     }
-    .block-grey {
-        padding: 35px 0 100px;
-        background: #f6f6f6;
+    .row-block {
+        padding: 35px 0 70px;
     }
     
 }
@@ -201,7 +250,7 @@ footer {
     .container {
         max-width: 960px;
     }
-    .block-grey h2 {
+    .row-block .big-text {
         font-size: 42px;
         line-height: 56px;
         margin-bottom: 40px;
