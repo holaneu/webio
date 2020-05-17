@@ -31,7 +31,7 @@ header {
     right: 0;
     z-index: 1100;
 }
-.logo {
+header .logo {
     position: relative;
     display: block;
     flex: 2;
@@ -41,20 +41,27 @@ header {
     text-decoration: none; 
     color: white;
 }
-.logo:hover {
+header .logo:hover {
     text-decoration: none;
 }
-header nav a {
+header .top-nav-main a {
     text-decoration: none; 
     color: #ffffff; 
     display: inline-block; 
-    padding: 10px 14px; 
+    padding: 5px; 
     font-family: 'Monotype-GillSansNovaBook', sans-serif; 
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
     line-height: 20px;
+    margin-left: 30px;
+}
+header .top-nav-main a.active {
+    border-bottom: 3px solid #ffffff;
+}
+header .top-nav-lang {
+    display: none;
 }
 main {
     background: #ffffff;
@@ -77,9 +84,25 @@ main section.page-cover h2 {
     color: #ffffff;
 }
 
-main section .section-heading {
-    padding: 15px; 
+main .section-heading {
+    padding: 50px 20px 30px;
     text-align: center;
+}
+h1, h2, h3, h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #b9b9b9;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 34px;
+    color: #000000;
 }
 .flex-box {
     display: flex;
@@ -138,29 +161,60 @@ main section .section-heading {
     background: #ffffff;
     color: #000000;
 }
+.block-grey {
+    padding: 30px 0 35px;
+    background: #f6f6f6;
+}
+.block-grey h2 {
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: normal;
+    text-transform: none;
+    margin-bottom: 20px;
+}
 
 footer {
     padding: 10px 20px; 
     background: white;
 }
 
-@media (min-width: 1200px) {
+
+@media screen and (min-width: 1200px) {
     .section-heading {
         padding: 85px 20px 60px;
     }
     .container {
         max-width: 1000px; 
-    }    
+    }
+    .top-nav-lang {
+        display: block;
+        position: relative;
+        margin-right: 30px;
+        text-align: right;
+        flex: 2;
+    }
 }
+
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
+    .block-grey h2 {
+        font-size: 42px;
+        line-height: 56px;
+        margin-bottom: 40px;
+    }
 }
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
     }
+    .block-grey {
+        padding: 35px 0 100px;
+        background: #f6f6f6;
+    }
+    
 }
 @media (min-width: 576px) {
     .container {
