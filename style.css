@@ -117,7 +117,7 @@ h2 {
     background-position: center center;
     background-size: cover;
     position: relative;
-    background-image: url('crete-2949058_1920.jpg');
+    background-image: url('cover_beach_1920.jpg');
 }
 .mask {
     content: '';
@@ -179,30 +179,10 @@ footer {
 }
 
 
-@media screen and (min-width: 1200px) {
-    .section-heading {
-        padding: 85px 20px 60px;
-    }
-    .container {
-        max-width: 1000px; 
-    }
-    .top-nav-lang {
-        display: block;
-        position: relative;
-        margin-right: 30px;
-        text-align: right;
-        flex: 2;
-    }
-}
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
     .container {
-        max-width: 960px;
-    }
-    .block-grey h2 {
-        font-size: 42px;
-        line-height: 56px;
-        margin-bottom: 40px;
+        max-width: 540px;
     }
 }
 
@@ -216,8 +196,30 @@ footer {
     }
     
 }
-@media (min-width: 576px) {
+
+@media (min-width: 992px) {
     .container {
-        max-width: 540px;
+        max-width: 960px;
+    }
+    .block-grey h2 {
+        font-size: 42px;
+        line-height: 56px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-heading {
+        padding: 85px 20px 60px;
+    }
+    .container {
+        max-width: 1000px; 
+    }
+    .top-nav-lang {
+        display: block;
+        position: relative;
+        margin-right: 30px;
+        text-align: right;
+        flex: 2;
     }
 }
