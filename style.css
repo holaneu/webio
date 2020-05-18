@@ -1,12 +1,11 @@
-* { 
-    box-sizing: border-box;
-}
 body *, html * {
+    box-sizing: border-box;
+    text-align: center; 
+    font-family: sans-serif;    
+}
+body, html {
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box; 
-    text-align: center; 
-    font-family: sans-serif;
 }
 a { 
     text-decoration: none; 
@@ -21,72 +20,10 @@ a:hover, a:focus {
     /*padding-left: 15px;
     padding-right: 15px;*/
 }
-header {
-    padding: 20px 20px; 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
-    color:silver; 
-    position: absolute; /*fixed*/
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1100;
-}
-header .logo {
-    position: relative;
-    display: block;
-    flex: 2;
-    text-align: left;
-    font-size: 26px; 
-    font-weight: 600; 
-    text-decoration: none; 
-    color: white;
-}
-header .logo:hover {
-    text-decoration: none;
-}
-header .top-nav-main a {
-    text-decoration: none; 
-    color: #ffffff; 
-    display: inline-block; 
-    padding: 5px; 
-    font-family: 'Monotype-GillSansNovaBook', sans-serif; 
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 15px;
-    line-height: 20px;
-    margin-left: 30px;
-}
-header .top-nav-main a.active {
-    border-bottom: 3px solid #ffffff;
-}
-header .top-nav-lang {
-    display: none;
-}
-main {
-    background: #ffffff;
-}
-main section.page-cover {
-    text-align: center;
-}
-main section.page-cover h1 {
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    line-height: 1.26;
-    color: #ffffff;
-}
-main section.page-cover h2 {
-    font-size: 50px;
-    font-weight: 200;
-    line-height: 60px;
-    color: #ffffff;
-}
-
-main .section-heading {
-    padding: 50px 20px 30px;
-    text-align: center;
+.flex-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 h1, h2, h3, h4 {
     margin-top: 20px;
@@ -104,11 +41,100 @@ h2 {
     font-size: 34px;
     color: #000000;
 }
-.flex-box {
-    display: flex;
-    justify-content: space-around; /*space-between*/
-    align-items: center;
+
+/* page parts */
+header {
+    padding: 15px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
+    position: absolute; /*fixed*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
 }
+header .flex-box {
+    justify-content: space-between;
+}
+header .logo {
+    position: relative;
+    display: block;
+    flex: 2;
+    text-align: left;
+    font-size: 26px; 
+    font-weight: 600; 
+    text-decoration: none; 
+    color: white;
+}
+header .logo:hover {
+    text-decoration: none;
+}
+.toggler-open {
+    display: block;
+    background: black;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+.toggler-close {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+.top-nav {
+    display: block;
+    position: fixed;
+    z-index: 1200;
+    top: 0;
+    right: -100%;
+    padding: 15px;
+    background: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: right 400ms ease-in;
+    /*visibility: hidden;*/
+}
+
+}
+.top-nav a {
+    text-decoration: none; 
+    color: #ffffff; 
+    display: block; 
+    padding: 5px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.top-nav a.active {
+    border-bottom: 3px solid #ffffff;
+}
+main {
+    background: #ffffff;
+}
+.section-heading {
+    padding: 30px 20px 30px;
+    text-align: center;
+}
+.page-cover {
+    text-align: center;
+}
+.page-cover h1 {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.26;
+    color: #ffffff;
+    margin-top: 0;
+}
+.page-cover h2 {
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 30px;
+    color: #ffffff;
+}
+
 .cover-background {
     height: 80vh;
     display: flex;
@@ -120,8 +146,7 @@ h2 {
     background-image: url('cover_forest_1920_blured.jpg'); 
         /*cover_beach_blured_1920*/
         /**/
-        /*cover_beach2_blured_1920*/
-    
+        /*cover_beach2_blured_1920*/    
 }
 .mask {
     content: '';
@@ -131,26 +156,28 @@ h2 {
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.18);
+    z-index: 900;
 }
 .small-container {
-    padding: 0;
     height: 100%;
-    width: 820px;
+    max-width: 90%;
+    padding: 70px 20px 30px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1000;
 }
 .btn-black {
-    margin: 40px auto 0;
+    margin: 10px auto 0;
     padding: 13px 6px;
-    width: 210px;
+    width: 180px;
     z-index: 1;
     border: none;
     text-transform: uppercase;
     font-size: 13px;
-    line-height: 46px;
+    line-height: 26px;
     letter-spacing: 2px;
     text-align: center;
     display: block;
@@ -250,10 +277,39 @@ footer {
     .container {
         max-width: 960px;
     }
+    .small-container {
+        max-width: 800px;
+    }
     .row-block .big-text {
         font-size: 42px;
         line-height: 56px;
         margin-bottom: 40px;
+    }
+    .toggler-open {
+        display: none;
+    }
+    .top-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px 15px 15px 70px;
+        background: transparent;
+        width: 100%;
+        height: unset;
+        color: white;
+        z-index: 1200;
+    }
+    .top-nav a {
+        color: #ffffff; 
+        display: inline-block; 
+        margin-left: 30px;
+    }
+    .top-nav .toggler-close {
+        display: none;
+    }
+    .top-nav a.active {
+        border-bottom: 3px solid #ffffff;
     }
 }
 
@@ -264,11 +320,11 @@ footer {
     .container {
         max-width: 1000px; 
     }
-    .top-nav-lang {
+    /*.top-nav-lang {
         display: block;
         position: relative;
         margin-right: 30px;
         text-align: right;
         flex: 2;
-    }
+    }*/
 }
