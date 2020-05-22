@@ -1,3 +1,4 @@
+/* mobile-first main style */
 body *, html * {
     box-sizing: border-box;
     text-align: center; 
@@ -11,7 +12,7 @@ a {
     text-decoration: none; 
 }
 a:hover, a:focus { 
-    text-decoration: underline; 
+    text-decoration: none; 
 }
 .container {
     width: 100%;
@@ -46,7 +47,7 @@ h2 {
 header {
     padding: 15px; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
-    position: absolute; /*fixed*/
+    position: fixed; /*absolute*/
     top: 0;
     left: 0;
     right: 0;
@@ -68,34 +69,57 @@ header .logo {
 header .logo:hover {
     text-decoration: none;
 }
-.toggler-open {
+.toggle-menu-open {
     display: block;
-    background: black;
     color: white;
-    padding: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
-.toggler-close {
+.toggle-menu-open:after {
+    background-image: url(bars.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 19px;
+    vertical-align: top;
+    width: 20px;
+}
+.toggle-menu-close {
     display: block;
-    padding: 5px;
     cursor: pointer;
+    background-image: url(close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    vertical-align: middle;
+    width: 20px;
+    padding: 25px;
 }
+
 .top-nav {
     display: block;
     position: fixed;
     z-index: 1200;
     top: 0;
     right: -100%;
-    padding: 15px;
+    padding: 60px 15px 15px;
     background: black;
-    width: 100%;
+    width: 200px;
     height: 100%;
     color: white;
-    transition: right 400ms ease-in;
-    /*visibility: hidden;*/
+    transition: right 0.5s ease;
+}
+.top-nav-active {
+    display: block;
+    right: 0;
 }
 
-}
+
 .top-nav a {
     text-decoration: none; 
     color: #ffffff; 
@@ -258,15 +282,10 @@ footer {
 
 
 @media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+
 }
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
     .row-block {
         padding: 35px 0 70px;
     }
@@ -285,15 +304,12 @@ footer {
         line-height: 56px;
         margin-bottom: 40px;
     }
-    .toggler-open {
-        display: none;
-    }
     .top-nav {
         display: block;
         position: absolute;
         top: 0;
         right: 0;
-        padding: 15px 15px 15px 70px;
+        padding: 15px;
         background: transparent;
         width: 100%;
         height: unset;
@@ -303,9 +319,13 @@ footer {
     .top-nav a {
         color: #ffffff; 
         display: inline-block; 
-        margin-left: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
-    .top-nav .toggler-close {
+    .top-nav .toggle-menu-close {
+        display: none;
+    }
+    .toggle-menu-open {
         display: none;
     }
     .top-nav a.active {
