@@ -12,7 +12,7 @@ a {
     text-decoration: none; 
 }
 a:hover, a:focus { 
-    text-decoration: underline; 
+    text-decoration: none; 
 }
 .container {
     width: 100%;
@@ -72,7 +72,7 @@ header .logo:hover {
 .toggle-menu-open {
     display: block;
     color: white;
-    padding: 10px;
+    /*padding: 10px;*/
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -283,15 +283,10 @@ footer {
 
 
 @media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+
 }
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
     .row-block {
         padding: 35px 0 70px;
     }
@@ -315,7 +310,7 @@ footer {
         position: absolute;
         top: 0;
         right: 0;
-        padding: 15px 15px 15px 70px;
+        padding: 15px;
         background: transparent;
         width: 100%;
         height: unset;
@@ -325,9 +320,13 @@ footer {
     .top-nav a {
         color: #ffffff; 
         display: inline-block; 
-        margin-left: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .top-nav .toggle-menu-close {
+        display: none;
+    }
+    .toggle-menu-open {
         display: none;
     }
     .top-nav a.active {
