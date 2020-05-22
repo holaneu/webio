@@ -1,3 +1,4 @@
+/* mobile-first main style */
 body *, html * {
     box-sizing: border-box;
     text-align: center; 
@@ -68,18 +69,38 @@ header .logo {
 header .logo:hover {
     text-decoration: none;
 }
-.toggler-open {
+.toggle-menu-open {
     display: block;
-    background: black;
     color: white;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
+    text-transform: uppercase;
 }
-.toggler-close {
+.toggle-menu-open:after {
+    background-image: url(bars.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 19px;
+    vertical-align: top;
+    width: 20px;
+}
+.toggle-menu-close {
     display: block;
-    padding: 5px;
     cursor: pointer;
+    background-image: url(close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    vertical-align: middle;
+    width: 20px;
 }
+
 .top-nav {
     display: block;
     position: fixed;
@@ -88,14 +109,18 @@ header .logo:hover {
     right: -100%;
     padding: 15px;
     background: black;
-    width: 100%;
+    width: 200px;
     height: 100%;
     color: white;
     transition: right 400ms ease-in;
     /*visibility: hidden;*/
 }
-
+.top-nav-active {
+    display: block;
+    right: 0;
 }
+
+
 .top-nav a {
     text-decoration: none; 
     color: #ffffff; 
@@ -285,9 +310,6 @@ footer {
         line-height: 56px;
         margin-bottom: 40px;
     }
-    .toggler-open {
-        display: none;
-    }
     .top-nav {
         display: block;
         position: absolute;
@@ -305,7 +327,7 @@ footer {
         display: inline-block; 
         margin-left: 30px;
     }
-    .top-nav .toggler-close {
+    .top-nav .toggle-menu-close {
         display: none;
     }
     .top-nav a.active {

@@ -21,43 +21,20 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <!--<link rel="icon" type="image/png" href="webio.png">-->
-    <script>
-      
-      function toggleNav(callback){
-        if(callback) {
-          toggler_open = document.querySelector('.toggler-open');
-          toggler_close = document.querySelector('.toggler-close');
-          top_nav = document.querySelector('.top-nav');
-          //HistoryAdd();
-          callback();
-        }      
-      }
-      function openNav() {
-        top_nav.style.right = '0%';
-        /*top_nav.style.visibility = 'visible';*/
-        toggler_open.style.visibility = 'hidden';
-        toggler_close.style.visibility = 'visible';
-      }
-      function closeNav() {
-        /*top_nav.style.display = 'block';*/
-        top_nav.style.right = '-100%';
-        toggler_open.style.visibility = 'visible';
-        toggler_close.style.visibility = 'hidden';
-      }
-    </script>
+    
   </head>
   <body>
     <header>
       <div class="container">
         <div class="flex-box">
           <a href="/" class="logo">Webio*</a>          
-          <div class="toggler-open" onclick="toggleNav(openNav);">menu</div>
+          <div class="toggle-menu-open">menu</div>
         </div>
       </div>
     </header>
     
     <nav class="top-nav">
-      <div class="toggler-close" onclick="toggleNav(closeNav);">close</div>        
+      <div class="toggle-menu-close"></div>        
       <a href="#" class="active">About us</a>
       <a href="#">Services</a>
       <a href="#">Contacts</a>
@@ -180,6 +157,24 @@
         </nav>
     </footer>
 
+    <script>
+      let topNav = document.querySelector('.top-nav');
+      let topNavToggleOpen = document.querySelector('.toggle-menu-open');
+      let topNavToggleClose = document.querySelector('.toggle-menu-close');
+      topNavToggleOpen.addEventListener('click', function () {
+        topNav.classList.toggle('top-nav-active');
+      });
+      topNavToggleClose.addEventListener('click', function () {
+        topNav.classList.toggle('top-nav-active');
+      });
+
+      function xxx(callback){
+        if(callback) {
+          //HistoryAdd();
+          callback();
+        }      
+      }
+    </script>
 
   </body>
 </html>
