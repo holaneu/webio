@@ -47,7 +47,7 @@ h2 {
 header {
     padding: 15px; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); 
-    position: absolute; /*fixed*/
+    position: fixed; /*absolute*/
     top: 0;
     left: 0;
     right: 0;
@@ -72,7 +72,6 @@ header .logo:hover {
 .toggle-menu-open {
     display: block;
     color: white;
-    /*padding: 10px;*/
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -99,6 +98,7 @@ header .logo:hover {
     top: 5px;
     vertical-align: middle;
     width: 20px;
+    padding: 25px;
 }
 
 .top-nav {
@@ -107,13 +107,12 @@ header .logo:hover {
     z-index: 1200;
     top: 0;
     right: -100%;
-    padding: 15px;
+    padding: 60px 15px 15px;
     background: black;
     width: 200px;
     height: 100%;
     color: white;
-    transition: right 400ms ease-in;
-    /*visibility: hidden;*/
+    transition: right 0.5s ease;
 }
 .top-nav-active {
     display: block;
