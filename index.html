@@ -24,17 +24,19 @@
     
   </head>
   <body>
+    <div class="page-wrapper">
+      
     <header>
       <div class="container">
         <div class="flex-box">
           <a href="/" class="logo">Webio*</a>          
-          <div class="toggle-menu-open">menu</div>
+          <div class="toggle-menu toggle-menu-open">menu</div>
         </div>
       </div>
     </header>
     
-    <nav class="top-nav">
-      <div class="toggle-menu-close"></div>        
+    <nav id="menu" class="top-nav">
+      <div class="toggle-menu toggle-menu-close"></div>        
       <a href="#" class="active">About us</a>
       <a href="#">Services</a>
       <a href="#">Contacts</a>
@@ -57,7 +59,7 @@
 
       <section class="row-block bg-grey">
         <div class="container">
-          <div class="section-heading">
+          <dviv class="section-heading">
             <p class="big-text">Duis aute irure dolor in reprehenderit in voluptate
                velit esse cillum dolore eu fugiat nulla pariatur. 
               Excepteur sint occaecat cupidatat proident.</p>
@@ -157,16 +159,24 @@
         </nav>
     </footer>
 
+    </div>
+
     <script>
-      let topNav = document.querySelector('.top-nav');
-      let topNavToggleOpen = document.querySelector('.toggle-menu-open');
-      let topNavToggleClose = document.querySelector('.toggle-menu-close');
-      topNavToggleOpen.addEventListener('click', function () {
-        topNav.classList.toggle('top-nav-active');
+      let body = document.querySelector('body');
+      let menuToggle = document.querySelectorAll('.toggle-menu');
+      console.log('*** menuToggle: ', menuToggle);
+
+      let menuToggleOpen = document.querySelector('.toggle-menu-open');
+      let menuToggleClose = document.querySelector('.toggle-menu-close');
+      menuToggleOpen.addEventListener('click', function () {
+        body.classList.toggle('is-menu-visible');
       });
-      topNavToggleClose.addEventListener('click', function () {
-        topNav.classList.toggle('top-nav-active');
+      menuToggleClose.addEventListener('click', function () {
+        body.classList.toggle('is-menu-visible');
       });
+      /*menuToggle.addEventListener('click', function () {
+        body.classList.toggle('is-menu-active');
+      });*/
 
       function xxx(callback){
         if(callback) {
