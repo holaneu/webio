@@ -1,3 +1,17 @@
+
+/* CSS3 variables:
+:root {
+  --main-bg-color: coral;
+  --main-txt-color: blue;
+  --main-padding: 15px;
+}
+#div1 {
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  padding: var(--main-padding);
+}
+*/
+
 /* mobile-first main style */
 body *, html * {
     box-sizing: border-box;
@@ -19,7 +33,7 @@ a:hover, a:focus {
     margin-right: auto;
     margin-left: auto;
 }
-.flex-box {
+.flex-box, .row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -79,6 +93,7 @@ header .logo:hover {
     width: 100%;
     z-index: 1100;
     transition: opacity 0.2s 0.6s ease;
+    opacity: 0;
 }
 body.is-menu-visible .page-wrapper:before {
     display: block;
